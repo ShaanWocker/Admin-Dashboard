@@ -1,11 +1,18 @@
-import React from 'react';
+import {useState} from 'react';
+
 
 const Login = () => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleClick = (e) => {
+        e.preventDefault();
+    }
     return (
         <div>
-            <input  type="input" placeholder="username" />
-            <input  type="password" placeholder="password" />
-            <button>Login</button>
+            <input  type="input" placeholder="username" onChange={e=>setUsername(e.target.value)}/>
+            <input  type="password" placeholder="password" onChange={e=>setPassword(e.target.value)}/>
+            <button onClick={handleClick}>Login</button>
         </div>
     );
 };
