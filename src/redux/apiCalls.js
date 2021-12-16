@@ -1,4 +1,4 @@
-import { loginStart, loginFailure, loginSuccess } from "./userRedux";
+import { loginStart, loginFailure, loginSuccess, logoutStart, logoutSuccess, logoutFailure } from "./userRedux";
 import { publicRequest } from "../requestMethods";
 import { userRequest } from "../requestMethods";
 import { 
@@ -23,6 +23,16 @@ export const login = async (dispatch, user) => {
         dispatch(loginSuccess(res.data));
     }catch(err){
         dispatch(loginFailure());
+    }
+};
+
+export const logout = async (dispatch, user) => {
+    dispatch(logoutStart());
+    try{
+        const res = await publicRequest.post("/auth/logout", user);
+        dispatch(logoutSuccess(res.data));
+    }catch(err){
+        dispatch(logoutFailure());
     }
 };
 
@@ -59,7 +69,7 @@ export const updateProduct = async (id, product, dispatch) => {
 export const addProduct = async (product, dispatch) => {
     dispatch(addProductStart());
     try{
-        const res = await userRequest.post(`/products`, {product});
+        const res = await userRequest.post(`/products`, product);
         dispatch(addProductSuccess(res.data));
     }catch(err){
         dispatch(addProductFailure());

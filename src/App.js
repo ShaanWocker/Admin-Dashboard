@@ -10,12 +10,14 @@ import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
+import Logout from "./pages/logout/Logout";
 
 function App() {
 
   const admin = JSON.parse(
     JSON.parse(localStorage.getItem("persist:root")).user
   ).currentUser.isAdmin;
+  
   return (
     <Router>
       <Switch>
@@ -47,6 +49,9 @@ function App() {
               </Route>
               <Route path="/newproduct">
                 <NewProduct />
+              </Route>
+              <Route path="/logout">
+                <Logout />
               </Route>
             </div>
           </>
