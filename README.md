@@ -1,5 +1,5 @@
 
-![alt text](https://github.com/ShaanWocker/Admin-Dashboard/blob/master/src/assets/images/ScreenShot1.png?raw=true)
+![alt text](https://github.com/ShaanWocker/Admin-Dashboard/blob/master/src/assets/images/Screenshot1.png?raw=true)
 
 
 
