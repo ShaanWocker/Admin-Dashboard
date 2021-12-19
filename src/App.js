@@ -13,12 +13,20 @@ import Login from "./pages/login/Login";
 import Logout from "./pages/logout/Logout";
 
 function App() {
+// <<<<<<< auth-login-hotfix
   
-  const admin = null;
-  const token = localStorage.getItem("persist:root")
-  if (token !== "" || token !== undefined) {
-    admin = JSON.parse(JSON.parse(token).user).currentUser.isAdmin;
-  }
+//   const admin = null;
+//   const token = localStorage.getItem("persist:root")
+//   if (token !== "" || token !== undefined) {
+//     admin = JSON.parse(JSON.parse(token).user).currentUser.isAdmin;
+//   }
+
+
+  const admin = localStorage.getItem("persist:root");
+  // const admin = JSON.parse(
+  //   JSON.parse(localStorage.getItem("persist:root")).user
+  // ).currentUser.isAdmin;
+  // main
   
   return (
     <Router>

@@ -23,16 +23,19 @@ export default function WidgetLg() {
     <div className="widgetLg">
       <h3 className="widgetLgTitle">Latest transactions</h3>
       <table className="widgetLgTable">
+        <tbody>
         <tr className="widgetLgTr">
           <th className="widgetLgTh">Customer</th>
           <th className="widgetLgTh">Date</th>
           <th className="widgetLgTh">Amount</th>
           <th className="widgetLgTh">Status</th>
         </tr>
+        </tbody>
         {orders.map(order=>(
+          <tbody>
         <tr className="widgetLgTr" key={order._id}>
           <td className="widgetLgUser">
-            
+
             <span className="widgetLgName">{order.userId}</span>
           </td>
           <td className="widgetLgDate">{format(order.createdAt)}</td>
@@ -41,6 +44,7 @@ export default function WidgetLg() {
             <Button type={order.status} />
           </td>
         </tr>
+        </tbody>
         ))}
       </table>
     </div>
