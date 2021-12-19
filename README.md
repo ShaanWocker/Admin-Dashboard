@@ -1,3 +1,8 @@
+
+![alt text](https://github.com/ShaanWocker/Admin-Dashboard/blob/master/src/assets/images/ScreenShot1.png?raw=true)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
