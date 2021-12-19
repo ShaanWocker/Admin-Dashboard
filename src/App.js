@@ -14,9 +14,10 @@ import Logout from "./pages/logout/Logout";
 
 function App() {
 
-  const admin = JSON.parse(
-    JSON.parse(localStorage.getItem("persist:root")).user
-  ).currentUser.isAdmin;
+  const admin = localStorage.getItem("persist:root");
+  // const admin = JSON.parse(
+  //   JSON.parse(localStorage.getItem("persist:root")).user
+  // ).currentUser.isAdmin;
   
   return (
     <Router>
